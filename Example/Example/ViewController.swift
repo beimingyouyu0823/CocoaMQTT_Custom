@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     //let defaultHost = "localhost"
     //OR
     //TEST Broker
-    let defaultHost = "broker-cn.emqx.io"
+    let defaultHost = "120.92.238.227"//"broker-cn.emqx.io"
+    let clientID = "Agora_01"
+    let userNameStr = "01GSPRKFNCYZPKDJC7R42CJQ7H"
+    let passWordStr = "01GSPRKFNCYZPKDJC7R42CJQ7H/315488"
 
     var mqtt5: CocoaMQTT5?
     var mqtt: CocoaMQTT?
@@ -86,11 +89,12 @@ class ViewController: UIViewController {
 
         if mqttVesion == "3.1.1" {
 
-            let clientID = "CocoaMQTT-\(animal!)-" + String(ProcessInfo().processIdentifier)
-            mqtt = CocoaMQTT(clientID: clientID, host: defaultHost, port: 1883)
+            let clientID = clientID //"CocoaMQTT-\(animal!)-" + String(ProcessInfo().processIdentifier)
+            mqtt = CocoaMQTT(clientID: clientID, host: defaultHost, port: 11883)//1883
+            
             mqtt!.logLevel = .debug
-            mqtt!.username = ""
-            mqtt!.password = ""
+            mqtt!.username = userNameStr
+            mqtt!.password = passWordStr
             mqtt!.willMessage = CocoaMQTTMessage(topic: "/will", string: "dieout")
             mqtt!.keepAlive = 60
             mqtt!.delegate = self
@@ -108,8 +112,8 @@ class ViewController: UIViewController {
             connectProperties.maximumPacketSize = 500
 
             mqtt5!.connectProperties = connectProperties
-            mqtt5!.username = ""
-            mqtt5!.password = ""
+            mqtt5!.username = userNameStr
+            mqtt5!.password = passWordStr
 
             let lastWillMessage = CocoaMQTT5Message(topic: "/will", string: "dieout")
             lastWillMessage.contentType = "JSON"
@@ -498,7 +502,7 @@ extension ViewController: CocoaMQTTDelegate {
     }
 
     func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
-        TRACE("id: \(id)")
+        TRACE("发送成功id: \(id)")
     }
 
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
