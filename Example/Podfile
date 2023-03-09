@@ -3,4 +3,7 @@ use_frameworks!
 
 target 'Example' do
     pod 'CocoaMQTT/WebSockets', :path => '../'
+    
+    pod 'SnapKit','5.6.0'
+    
 end

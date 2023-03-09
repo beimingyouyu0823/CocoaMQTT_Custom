@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		04029F191DE3F183004513DD /* client-keycert.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 04029F181DE3F176004513DD /* client-keycert.p12 */; };
 		042448B31C366F2300F6A33E /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042448B21C366F2300F6A33E /* ChatMessage.swift */; };
-		04A7EAA01C362BC4004A40EF /* ChatRightMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7EA9F1C362BC4004A40EF /* ChatRightMessageCell.swift */; };
 		04DB76581C1E7BB900776B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB76571C1E7BB900776B4C /* AppDelegate.swift */; };
 		04DB765A1C1E7BB900776B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB76591C1E7BB900776B4C /* ViewController.swift */; };
 		04DB765D1C1E7BB900776B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DB765B1C1E7BB900776B4C /* Main.storyboard */; };
 		04DB765F1C1E7BB900776B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DB765E1C1E7BB900776B4C /* Assets.xcassets */; };
 		04DB76621C1E7BB900776B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DB76601C1E7BB900776B4C /* LaunchScreen.storyboard */; };
-		04FE64871C2C41AE001E8F43 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE64861C2C41AE001E8F43 /* ChatViewController.swift */; };
-		04FE64A71C2D9F75001E8F43 /* ChatLeftMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE64A61C2D9F75001E8F43 /* ChatLeftMessageCell.swift */; };
+		84FAAC6429B7157400E5BB52 /* LatencyAsyncSocketTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAC6329B7157400E5BB52 /* LatencyAsyncSocketTool.swift */; };
+		84FAAC6629B82FBD00E5BB52 /* RttTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAC6529B82FBD00E5BB52 /* RttTableViewCell.swift */; };
+		84FAAC6829B835B500E5BB52 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAC6729B835B500E5BB52 /* Double+Extension.swift */; };
 		F5ED7D1B70F44D3F5E5DF37A /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EB0B12055698AEA8D71AD4 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		04029F181DE3F176004513DD /* client-keycert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "client-keycert.p12"; sourceTree = "<group>"; };
 		042448B21C366F2300F6A33E /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
-		04A7EA9F1C362BC4004A40EF /* ChatRightMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRightMessageCell.swift; sourceTree = "<group>"; };
 		04DB76541C1E7BB900776B4C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DB76571C1E7BB900776B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DB76591C1E7BB900776B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +43,11 @@
 		04DB765E1C1E7BB900776B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DB76611C1E7BB900776B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DB76631C1E7BB900776B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04FE64861C2C41AE001E8F43 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		04FE64A61C2D9F75001E8F43 /* ChatLeftMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLeftMessageCell.swift; sourceTree = "<group>"; };
 		0BC031E0076FF375408AD8D1 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		33EB0B12055698AEA8D71AD4 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FAAC6329B7157400E5BB52 /* LatencyAsyncSocketTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatencyAsyncSocketTool.swift; sourceTree = "<group>"; };
+		84FAAC6529B82FBD00E5BB52 /* RttTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RttTableViewCell.swift; sourceTree = "<group>"; };
+		84FAAC6729B835B500E5BB52 /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		BE425DD5C76A2598F8AC2CC7 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,10 +84,10 @@
 		04DB76561C1E7BB900776B4C /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				84FAAC6729B835B500E5BB52 /* Double+Extension.swift */,
+				84FAAC6329B7157400E5BB52 /* LatencyAsyncSocketTool.swift */,
 				04DB76591C1E7BB900776B4C /* ViewController.swift */,
-				04FE64861C2C41AE001E8F43 /* ChatViewController.swift */,
-				04FE64A61C2D9F75001E8F43 /* ChatLeftMessageCell.swift */,
-				04A7EA9F1C362BC4004A40EF /* ChatRightMessageCell.swift */,
+				84FAAC6529B82FBD00E5BB52 /* RttTableViewCell.swift */,
 				042448B21C366F2300F6A33E /* ChatMessage.swift */,
 				04DB765B1C1E7BB900776B4C /* Main.storyboard */,
 				04DB767C1C1E7C2D00776B4C /* Supporting Files */,
@@ -224,12 +224,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
 				"${BUILT_PRODUCTS_DIR}/MqttCocoaAsyncSocket/MqttCocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MqttCocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,11 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FE64A71C2D9F75001E8F43 /* ChatLeftMessageCell.swift in Sources */,
-				04A7EAA01C362BC4004A40EF /* ChatRightMessageCell.swift in Sources */,
+				84FAAC6829B835B500E5BB52 /* Double+Extension.swift in Sources */,
 				04DB765A1C1E7BB900776B4C /* ViewController.swift in Sources */,
 				042448B31C366F2300F6A33E /* ChatMessage.swift in Sources */,
-				04FE64871C2C41AE001E8F43 /* ChatViewController.swift in Sources */,
+				84FAAC6429B7157400E5BB52 /* LatencyAsyncSocketTool.swift in Sources */,
+				84FAAC6629B82FBD00E5BB52 /* RttTableViewCell.swift in Sources */,
 				04DB76581C1E7BB900776B4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +393,7 @@
 				DEVELOPMENT_TEAM = JDPG69R49Z;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.api.zego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -408,6 +411,7 @@
 				DEVELOPMENT_TEAM = JDPG69R49Z;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.api.zego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
