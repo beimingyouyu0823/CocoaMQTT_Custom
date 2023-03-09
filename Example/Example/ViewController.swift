@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var timer: Timer?
     //用户当前选择时间，默认100秒
-    var curDeTime:Int = 1
+    let curDeTime:Int = 100
     var dataArray = [Double]()
 
     private var netSocketTool: LatencyAsyncSocketTool?
@@ -46,8 +46,6 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 self.dataArray.append(time)
                 self.tableView.reloadData()
-                self.curDeTime += 1
-                self.netSocketTool?.sendData(self.curDeTime)
                 print(self.dataArray)
             }
         }
@@ -150,11 +148,10 @@ class ViewController: UIViewController {
     @objc private func didClickConnectButton(){
         self.netSocketTool?.asyncSocketConnect()
         self.netSocketTool?.connectSuccess = { [weak self] in
-            self?.netSocketTool?.sendData(self!.curDeTime)
-//            self?.timerConfige { finish in
-//                    print("rtt测试完成")
-//                 //   guard let self = self else{ return }
-//                }
+            self?.timerConfige { finish in
+                    print("rtt测试完成")
+                 //   guard let self = self else{ return }
+                }
         }
  
     }
